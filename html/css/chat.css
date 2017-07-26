@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #4b4b4b;
+}
+
+.side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: left 0.3s linear;
+    left: 0;
+}
+
+.side,
+.side-body {
+    border-right: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    width: 400px;
+}
+
+.side.hide {
+    left: -400px;
+}
+
+.container-head {
+    background-color: #eee;
+    display: flex;
+}
+
+.container-head,
+.side-search {
+    padding: 10px 15px;
+}
+
+.side-search-box {
+    border: 1px solid #f6f6f6;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.side-search-box > input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 20px;
+}
+
+.side-search {
+    border-bottom: 1px solid #eee;
+}
+
+.avatar {
+    position: relative;
+    width: 49px;
+    height: 49px;
+}
+
+.container-head > .avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar:after {
+    content: ' ';
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/user.svg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.side-head {
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #00bfa5;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+.side-body {
+    overflow-y: auto;
+    position: absolute;
+    top: 115px;
+    bottom: 0px;
+    background-color: #fff;
+}
+
+.side-chatlist-item {
+    display: flex;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.side-chatlist-item:hover {
+    background-color: #f4f5f5;
+}
+
+.avatar-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.avatar-info-secondary {
+    margin-top: 3px;
+    color: rgba(0,0,0,0.6);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    /*background-color: #dfdfdf;*/
+}
+
+::-webkit-scrollbar-thumb {
+    /*background-color: rgba(0,0,0,0.1);*/
+    background-color: #eee;
+}
+
+.container {
+    position: fixed;
+    left: 400px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.container-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    background-color: #f5f1ee;
+}
+
+.input-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.input {
+    position: relative;
+    outline: none;
+    z-index: 1;
+}
+
+.input-placeholder {
+    position: absolute;
+    color: #a4a4a4;
+    z-index: 0;
+}
+
+.container-body {
+    position: absolute;
+    bottom: 69px;
+    top: 60px;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #e5ddd5;
+}
+
+.msg {
+    padding: 0 15px;
+    margin-bottom: 12px;
+    z-index: 1;
+}
+
+.msg-in,
+.msg-out {
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+}
+
+.msg-out {
+    background-color: #dcf8c6;
+    float: right;
+    border-top-right-radius: 0px;
+}
+
+.msg-in {
+    background-color: #fff;
+    float: left;
+    border-top-left-radius: 0px;
+}
+
+.tile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/bg.png);
+    opacity: 0.06;
+}
